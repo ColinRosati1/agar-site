@@ -1,0 +1,66 @@
+/* FILE: main/custom-styles/__typography-editor.scss */
+
+//
+// Custom visual editor typography
+//
+
+
+
+
+
+// TinyMCE overrides
+
+	.mce-content-body {
+		line-height: $typography_line_height;
+
+
+
+		// Heading tags and classes
+
+			@each $selector, $settings in $h_tags_setup {
+
+				#{$selector} {
+					line-height: nth( $settings, 2 );
+				}
+
+			}
+
+
+
+		// Display text size classes
+
+			@each $i, $size in $display_text_size {
+
+				.display-#{$i} {
+					line-height: 1 + $golden_minor * 3 / 8 + $golden_minor / 2 / $i;
+				}
+
+			}
+
+	}
+
+
+
+// Default fonts
+
+	.mce-content-body,
+	.mce-content-body .font-body {
+		font-family: map_get( $customize_options, 'typography_fonts_text' );
+		font-family: var(--typography_fonts_text);
+	}
+
+	.mce-content-body .font-headings,
+	.mce-content-body .font-headings-primary {
+		font-family: map_get( $customize_options, 'typography_fonts_headings' );
+		font-family: var(--typography_fonts_headings);
+	}
+
+	.mce-content-body .font-logo,
+	.mce-content-body .font-headings-secondary {
+		font-family: map_get( $customize_options, 'typography_fonts_logo' );
+		font-family: var(--typography_fonts_logo);
+	}
+
+	.mce-content-body .font-inherit {
+		font-family: inherit;
+	}

@@ -1,0 +1,159 @@
+@font-face {
+/*src: url("assets/font/FoundersGrotesk-Regular.woff") format("woff");*/	
+/*src:url("FoundersGrotesk-Regular.woff2");*/
+/*src: url(/assets/font/FoundersGrotesk-Regular.woff), url(/assets/font/FoundersGrotesk-Regular.woff2);*/
+
+ font-family: Foundersgrotesk Regular;
+ src: url(../assets/font/foundersgrotesk-regular.woff);
+}
+
+body{
+	background-color: pink;
+	color:red;
+	font-family: Foundersgrotesk Regular;
+	font-size:60px;
+	width:100%;
+	margin:0px;
+	scroll-snap-type: y mandatory;
+	overflow-y:scroll;
+}
+
+::selection {
+  background: blue;
+  color:green;
+}
+
+
+/*======================================= HEADER =============================*/
+
+
+#topNav {
+	display:flex;
+	flex-direction:horizontal;
+	justify-content:space-between;
+	align-items: flex-end;
+	width:100vw;
+	height:10vh;
+	position:fixed;
+	padding:10px 16px 10px 0px;
+	border-bottom: solid red;
+	font-size:48px;
+	text-transform:uppercase;
+	background-color:pink;
+}
+
+
+.logo {
+	margin-left:50px;
+}
+.navLeft {
+	margin-left:20px;
+}
+
+.navRight {
+	margin-right:20px;
+}
+
+
+/*======================================= SIDE NAV CAROUSEL DOTS =============================*/
+
+.slideNav {
+	position:fixed;
+	top:50vh;
+	margin-top:-25px;
+	right:24px;
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+
+}
+
+
+.inactiveDot{
+	border-radius:50%;
+	height:10px;
+	width:10px;
+	border: 2px solid red;
+	margin-top:8px;
+}
+
+
+
+.activeDot{
+	border-radius:50%;
+	height:12px;
+	width:12px;
+	background-color:red;
+	margin-top:8px;
+}
+
+/*======================================= HERO COPY =============================*/
+
+.hero{
+	height:100vh;
+	width:100vw;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	scroll-snap-align: start;
+}
+
+.heroCopy{
+	width:60vw;
+}
+
+/*======================================= ART, CULTURE, TECH =============================*/
+
+.hero span{ 
+	color: brown;
+	border-bottom: 5px dotted red;
+}
+
+#art {
+
+}
+
+#cultureImages {
+display:none;
+}
+
+#kylie {
+	position:absolute;
+	width:25vw;
+	left:100px;
+	margin-top:-150px;
+	z-index:-1;
+}
+
+#supreme {
+	position:absolute;
+	width:30vw;
+	right:200px;
+	z-index:-1;
+	margin-top:110px;
+
+}
+
+#dog {
+	position:absolute;
+	width:10vw;
+	right:400px;
+	margin-top:-100px;
+	z-index:-4;
+}
+
+#technology {
+
+}
+
+/*======================================= footer =============================*/
+footer {
+	background-color:red;
+	padding-top:16px;
+	padding-left:16px;
+	color:pink;
+	font-size:48px;
+	display:fixed;
+	bottom:20px;
+}
+

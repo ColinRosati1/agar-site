@@ -1,0 +1,244 @@
+/* FILE: _setup.scss */
+
+//
+// Stylesheets setup.
+//
+// @package    Modern
+// @copyright  WebMan Design, Oliver Juhas
+//
+// @since    2.0.0
+// @version  2.3.0
+//
+
+// Theme options
+
+	$customize_options: (
+
+		// Logo
+
+			'custom_logo_height': 100px,
+
+		// Colors
+
+			// For accessibility test with http://jxnblk.com/colorable/demos/text/
+
+			'color_accent':      #00855b, // Changed in theme version 2.0.0 from #0aac8e to make it more accessible.
+			'color_accent_text': #ffffff,
+
+			'color_header_background': #0a0c0e,
+			'color_header_text':       #ffffff,
+
+			'color_intro_background': #1a1c1e,
+			'color_intro_text':       #ffffff,
+
+			'color_content_background': #ffffff,
+			'color_content_text':       #6a6c6e,
+			'color_content_headings':   #1a1c1e,
+
+			'color_footer_background': #eaecee,
+			'color_footer_text':       #5a5c5e, // Changed in theme version 2.0.0 from #6a6c6e to make it more accessible.
+			'color_footer_headings':   #1a1c1e,
+
+		// Layout
+
+			'layout_width_content': 1200px,
+
+		// Typography
+
+			'typography_size_html': 16px,
+			'typography_fonts_text': ( 'Fira Sans', 'Helvetica Neue', Arial, sans-serif ),
+			'typography_fonts_headings': ( 'Fira Sans', 'Helvetica Neue', Arial, sans-serif ),
+			'typography_fonts_logo': ( 'Fira Sans', 'Helvetica Neue', Arial, sans-serif ),
+
+	);
+
+
+
+// Typography
+
+	// Starter CSS backwards compatibility.
+	$font_size: map_get( $customize_options, 'typography_size_html' ) / 1px; // "/ 1px" makes the value unitless.
+
+	// Spacing
+
+		$typography_line_height: 1.618;
+		$typography_margin_bottom: 1.618;
+
+	// Headings
+
+		$h_tags_setup: (
+
+			// $selector : (
+			//   $size
+			//   $line_height
+			//   $margin_top    [ ( span_4_or_3_lines - $size * $line_height - $margin_bottom ) / $size ]
+			//   $margin_bottom [ $margin_bottom / $size / $line_height ]
+			// )
+
+			// @link http://www.zell-weekeat.com/responsive-typography/
+			//
+			// Em vs Rem section regarding vertical rhythm
+			//
+			// "First, we’re not 100% precise and accurate with our math. We could get more precise (like 10 decimal places), but that would make our code ugly as hell…"
+			// "Second, different browsers handle subpixel rounding issues differently. This means we’ll never be able to get pixel-perfect rhythms no matter how hard we try."
+			// "So, here’s what I realized. It’s impossible to apply perfect responsive vertical rhythms across different browsers. At least not with the current technology."
+
+			// @see "Golden Ditonic Scale" at http://spencermortensen.com/articles/typographic-scale/ or http://www.modularscale.com/?1&em&1.125
+
+			'h1, .h1' : (
+				2.281,
+				1.19,
+				( 4 * $typography_line_height - 2.281 * 1.19 - $typography_margin_bottom ) / 2.281,
+				$typography_margin_bottom / 2.281 / 1.19
+			),
+
+			'h2, .h2' : (
+				1.802,
+				1.19,
+				( 4 * $typography_line_height - 1.802 * 1.19 - $typography_margin_bottom ) / 1.802,
+				$typography_margin_bottom / 1.802 / 1.19
+			),
+
+			'h3, .h3' : (
+				1.424,
+				1.38,
+				( 3 * $typography_line_height - 1.424 * 1.38 - $typography_margin_bottom ) / 1.424,
+				$typography_margin_bottom / 1.424 / 1.38
+			),
+
+			'h4, .h4' : (
+				1.125,
+				( 1.62 / 1.125 ),
+				( 3 * $typography_line_height - 1.125 * ( 1.62 / 1.125 ) - $typography_margin_bottom ) / 1.125,
+				$typography_margin_bottom / 1.125 / ( 1.62 / 1.125 )
+			),
+
+			'h5, .h5' : (
+				1.125,
+				( 1.62 / 1.125 ),
+				( 3 * $typography_line_height - 1.125 * ( 1.62 / 1.125 ) - $typography_margin_bottom ) / 1.125,
+				$typography_margin_bottom / 1.125 / ( 1.62 / 1.125 )
+			),
+
+			'h6, .h6' : (
+				1.125,
+				( 1.62 / 1.125 ),
+				( 3 * $typography_line_height - 1.125 * ( 1.62 / 1.125 ) - $typography_margin_bottom ) / 1.125,
+				$typography_margin_bottom / 1.125 / ( 1.62 / 1.125 )
+			)
+
+		);
+
+	// Display font size
+
+		// @see "Golden Ditonic Scale" at http://spencermortensen.com/articles/typographic-scale/ or http://www.modularscale.com/?1&em&1.125
+		$display_text_size: (
+			1 : 2.281em,
+			2 : 2.887em,
+			3 : 3.653em,
+			4 : 4.624em,
+		);
+
+
+
+// Others
+
+	//
+	// Breakpoints info:
+	//
+	// 's'     :  448, // =  28em // Starting mobile landscape
+	// 'm'     :  672, // =  42em // Starting tablet portrait
+	// 'l'     :  880, // =  55em // Starting tablet landscape
+	// 'xl'    : 1280, // =  80em // Starting laptop
+	// 'xxl'   : 1600, // = 100em // Starting desktop
+	// 'xxxl'  : 1920, // = 120em // Starting desktop full HD
+	// 'xxxxl' : 2560, // = 160em // Starting desktop WQHD
+	//
+
+	// Support
+
+		// @subpackage  Post Formats
+		// @see  includes/frontend/class-post-media.php
+		$supported_post_formats: (
+			'audio',
+			'gallery',
+			'image',
+			'link',
+			'quote',
+			'status',
+			'video',
+		);
+
+	// Predefined colors
+
+		$colors: (
+
+			'error_background': rgba( #e00, .85 ),
+			'error_text':       #fff,
+
+			'info_background': rgba( #05e, .85 ),
+			'info_text':       #fff,
+
+			'success_background': rgba( #072, .85 ),
+			'success_text':       #fff,
+
+			'warning_background': rgba( #fd0, .85 ),
+			'warning_text':       #310,
+
+		);
+
+	// Spacing
+
+		$vertical_gap: 6rem;
+
+		$mobile_menu_toggle_height: 3.618; // In rem.
+
+	// Opacity
+
+		$overlay_from_text_color_opacity: .07;
+
+	// Animation
+
+		$small_animation_speed: .3; // Seconds
+		$large_animation_speed: .5; // Seconds
+
+	// Entry meta
+
+		$entry_meta_icons: (
+
+			// class: char
+
+			'author'        : '\f304',
+			'cat-links'     : '\f301',
+			'comments-link' : '\f300',
+			'entry-date'    : '\f303',
+			// 'tags-links'    : '\f302',
+
+		);
+
+	// Elements
+
+		// Margin bottom
+		$tags_margin_bottom: (
+			'h1',
+			'h2',
+			'h3',
+			'.h1',
+			'.h2',
+			'.h3',
+			'p',
+			'ol',
+			'ul',
+			'blockquote',
+			'.gallery',
+			'.tiled-gallery',
+		);
+
+		// Buttons
+		$button_elements: (
+			'.button',
+			'button',
+			'input[type="button"]',
+			'input[type="reset"]',
+			'input[type="submit"]',
+		);
