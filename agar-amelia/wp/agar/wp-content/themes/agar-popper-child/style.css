@@ -1,0 +1,290 @@
+/*
+Theme Name: agar popper chils theme
+Theme URI: http://lynda.com/mor10
+Description: Agars child theme Popper theme.
+Author: agar-agar
+Author URI: http://mor10.com
+Template: popper
+Version: 0.1.0
+*/
+
+@import url('../popper/style.css');
+
+body {
+	background-color: white;
+	font-family: "Avenir Next W01", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ * {
+    cursor: inherit;
+  }
+}
+
+/*============================================= Main Menu ==============================*/
+/*.header-navigation {
+	padding: 2em 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+	
+}*/
+
+.main-navigation {
+    clear: both;
+    display: block;
+    width: 100%;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    vertical-align: center;
+    z-index: 100;
+}
+
+.main-navigation a {
+    position: relative;
+    display: block;
+    padding: 0.8em 1em;
+    font-weight: 100;
+    text-decoration: none;
+    line-height: 1.6em;
+    color: white;
+    /*float:left;*/
+
+}
+
+.main-navigation a:hover {
+	border-style: solid;
+    border-color: white;
+    text-decoration: none;
+ 
+}
+
+
+.nav-left {
+    float: left;
+}
+
+.nav-right {
+    float: right;
+}
+
+#masthead {
+    /*max-height: 4em;*/
+    padding:0px;
+}
+
+.site-header {
+    min-height: 0em;
+    padding:0px;
+}
+@media screen and (min-width: 50em){
+	.site-header {
+	    min-height: 3em;
+	}
+}
+
+/*@media screen and (min-width: 50em){
+	.main-navigation ul, .main-navigation.toggled ul {
+	    min-height: 0em;
+	    max-height: none;
+	    margin: 0;
+	    padding-left: 0;
+	    text-align: center;
+	}
+}
+*/
+
+@media screen and (min-width: 700px){
+	.main-navigation ul a{
+	    min-height: 2em;
+	    padding: 0.1em 0.3em;
+	}
+}
+
+@media screen and (min-width: 500px){
+	.main-navigation ul a{
+	    min-height: 2em;
+	    padding: 0.1em 0.3em;
+	}
+}
+
+@media screen and (min-width: 300px){
+	.main-navigation {
+	    min-height: 2em;
+	}
+}
+@media screen and (min-width: 355px){
+	.main-navigation ul {
+		display:block;
+	    min-height: 2em;
+	    padding: 0.1em 0.3em;
+	}
+}
+
+@media screen and (min-width: 355px){
+	.main-navigation a .agar-menu a {
+	    min-height: 2em;
+	    position: relative;
+	    padding: 0.1em 0.3em;
+	    font-weight: 50;
+	    text-decoration: none;
+	    line-height: 0.6em;
+	}
+}
+
+/*TThis is the nav link for Home*/
+#menu-item-17{
+	padding: 1em 0em 0em 2em;
+	float:left;
+}
+
+
+@media screen and (min-width: 375px){
+	#menu-item-17{
+		padding: 1em 0em 0em 1em;
+		float:left;
+	}
+}
+
+/*TThis is the nav link for client*/
+#menu-item-18{
+	padding: 1em 1em ;
+	float:right;
+}
+
+@media screen and (min-width: 375px){
+	#menu-item-18 {
+		padding: 1em 1em;
+		float:right;
+	}
+}
+
+.agar-menu {
+	padding: 0em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+}
+.agar-menu a {
+	/*font-size: 1em;*/
+	color:white;
+	text-decoration: none;
+	/*padding-top: 1em;*/
+}
+
+
+
+/*================================================ END OF HEADER ==================================*/
+
+
+#cursor {
+  position: absolute;
+  left: -28px;
+  top: -34px;
+  will-change: transform;
+  transform: translate(-999px, -999px);
+  pointer-events: none;
+
+  img {
+    will-change: transform;
+    transition: transform .1s linear;
+  }
+}
+
+
+
+
+#content-body{
+	cursor: 
+	font-size: 8em;
+	position: fixed;
+	bottom:0em;
+	left:0;
+	right:0;
+	color:black;
+	text-align: center;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-size: 200px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: normal;
+	letter-spacing: 15.7px;
+}
+
+@media screen and (max-width: 150px){
+	#content-body{
+		font-size: 1em;
+	}	
+}
+
+@media screen and (min-width: 200px){
+	#content-body{
+		font-size: 3em;
+	}	
+}
+
+@media screen and (min-width: 300px){
+	#content-body{
+		font-size: 3.5em;
+	}	
+}
+
+@media screen and (min-width: 500px){
+	#content-body{
+		font-size: 5em;
+	}	
+}
+
+@media screen and (min-width: 600px){
+	#content-body{
+		font-size: 6em;
+	}	
+}
+
+@media screen and (min-width: 700px){
+	#content-body{
+		font-size: 7em;
+	}	
+}
+
+ /* ======================================================== Entry content* =======================================*/
+.entry-title {
+	display:none;
+}
+
+.page-content, .deck, .entry-content, .entry-summary {
+    margin: 7em 0 0;
+}
+
+
+#content-title{
+
+}
+
+#content-title:hover{
+	/*cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/happy.png"), pointer;*/
+	cursor:url("asset/not-allowed.png") 50 50, pointer;
+	/*cursor:not-allowed;*/
+	/*cursor: url(images/my-cursor.png), auto;*/
+
+}
+
+
+
+
+.site-footer{
+	padding: 2em 1em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.entry-footer::before {
+    width: 0em;	
+}
+
+
+

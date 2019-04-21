@@ -1,0 +1,24 @@
+/* FILE: main/custom-styles/__header.scss */
+
+//
+// Site header colors
+//
+
+
+
+
+
+.site-header-navigation,
+.site-header-navigation::before {
+	@extend %site_header_colors;
+}
+
+.site-header-content {
+	@extend %intro_colors;
+}
+
+// Requires higher specificity for browser with no CSS variables support.
+.site .site-header-content,
+.site .site-header-navigation {
+	background: none; //*
+}
